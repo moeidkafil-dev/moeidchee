@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+<meta charset="UTF-8">
+<title>سایت آموزشی پاسارگاد </title>
+<link href="https://fonts.googleapis.com/css2?family=BKoodak&display=swap" rel="stylesheet">
+<style>
+/* فونت فارسی */
+body {
+    font-family: 'BKoodak', Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #000;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* پس‌زمینه ماتریکسی کم‌رنگ */
+#matrix {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* هدر */
+header {
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 36px;
+    font-weight: bold;
+    color: #0f0;
+    text-shadow: 0 0 8px #0f0, 0 0 12px #0f0;
+}
+
+/* المان‌های پاسارگاد با SVG */
+.pasargad {
+    position: absolute;
+    width: 80px;
+    height: 200px;
+    top: 60px;
+    opacity: 0.7;
+}
+.pasargad.left {
+    left: 30px;
+}
+.pasargad.right {
+    right: 30px;
+}
+.pasargad svg {
+    width: 100%;
+    height: 100%;
+}
+
+/* منو */
+nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+nav a {
+    color: #0f0;
+    text-decoration: none;
+    margin: 0 25px;
+    font-weight: bold;
+    font-size: 20px;
+    text-shadow: 0 0 5px #0f0;
+    transition: all 0.3s;
+}
+nav a:hover {
+    color: #ffd700;
+    transform: scale(1.2);
+    text-shadow: 0 0 15px #ffd700;
+}
+
+/* بخش‌ها */
+main {
+    padding: 0 100px;
+}
+
+/* کارت‌ها */
+.section {
+    margin-bottom: 50px;
+}
+
+h2 {
+    color: #ffd700;
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-shadow: 0 0 8px #ffd700;
+}
+
+.content-item {
+    background: rgba(0,0,0,0.75);
+    border: 2px solid #0f0;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: all 0.3s;
+    box-shadow: 0 0 8px #0f0;
+}
+.content-item:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 0 20px #0f0, 0 0 25px #0ff;
+}
+.content-item h3 {
+    color: #0ff;
+    margin-bottom: 10px;
+}
+
+/* دکمه‌ها */
+.button {
+    background: linear-gradient(45deg, #0f0, #0ff);
+    color: black;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 0 5px #0f0;
+}
+.button:hover {
+    background: linear-gradient(45deg, #ffd700, #0f0);
+    color: black;
+    box-shadow: 0 0 20px #0ff, 0 0 30px #0f0;
+}
+
+/* فوتر */
+footer {
+    text-align: center;
+    padding: 30px;
+    color: #0f0;
+    text-shadow: 0 0 8px #0f0;
+    border-top: 2px solid #0f0;
+}
+</style>
+</head>
+<body>
+
+<canvas id="matrix"></canvas>
+
+<!-- المان‌های پاسارگاد -->
+<div class="pasargad left">
+<svg viewBox="0 0 64 200">
+  <rect x="10" y="0" width="8" height="200" fill="#0f0"/>
+  <rect x="20" y="0" width="8" height="200" fill="#0f0"/>
+  <rect x="30" y="0" width="8" height="200" fill="#0f0"/>
+</svg>
+</div>
+<div class="pasargad right">
+<svg viewBox="0 0 64 200">
+  <rect x="10" y="0" width="8" height="200" fill="#0f0"/>
+  <rect x="20" y="0" width="8" height="200" fill="#0f0"/>
+  <rect x="30" y="0" width="8" height="200" fill="#0f0"/>
+</svg>
+</div>
+
+<header>سایت آموزشی پاسارگاد </header>
+
+<nav>
+<a href="#home">خانه</a>
+<a href="#content">محتواها</a>
+<a href="#shop">فروشگاه</a>
+<a href="#contact">تماس با ما</a>
+</nav>
+
+<main>
+<section id="home" class="section">
+<h2>خوش آمدید</h2>
+<p>میتوانید در این سایت مطالب اموزشی دریافت کرده و یا حتی خریداری کنید .</p>
+</section>
+
+<section id="content" class="section">
+<h2>محتواهای آموزشی</h2>
+<div class="content-item">
+<h3>جزوه ریاضی پایه</h3>
+<p>جزوه کامل ریاضی پایه به صورت PDF.</p>
+<a href="https://dl.fizikghorbani.com/Files/jozveh/%D8%AC%D8%B2%D9%88%D9%87%20%D8%B1%DB%8C%D8%A7%D8%B6%DB%8C%20%D8%AF%D9%87%D9%85%20%D8%AA%D8%AC%D8%B1%D8%A8%DB%8C.pdf" download class="button">دانلود</a>
+</div>
+</div>
+<div class="content-item">
+<h3>ویدئو آموزش شیمی</h3>
+<p>ویدئوی آموزشی ۳۰ دقیقه‌ای برای شیمی متوسطه.</p>
+<a href="https://moeidchee4-553q.vercel.app/" class="button">مشاهده آنلاین</a>
+</div>
+</section>
+
+<section id="shop" class="section">
+<h2>فروشگاه</h2>
+<div class="content-item">
+<h3>کتاب آموزشی فیزیک</h3>
+<p>قیمت: ۵۰ هزار تومان</p>
+<a href="https://moeidchee3-lz6f.vercel.app/" class="button">خرید</a>
+</div>
+<div class="content-item">
+<h3>جزوه زیست‌شناسی</h3>
+<p>قیمت: ۳۰ هزار تومان</p>
+<a href="https://moeidchee21.vercel.app/" class="button">خرید</a>
+</div>
+</section>
+
+<section id="contact" class="section">
+<h2>تماس با ما</h2>
+<p>ایمیل: info@example.com</p>
+<p>تلفن: ۰۲۱-۱۲۳۴۵۶۷۸</p>
+</section>
+</main>
+
+<footer>© 2025 سایت آموزشی پاسارگاد ماتریکسی</footer>
+
+<script>
+// افکت ماتریکس کم‌رنگ
+const canvas = document.getElementById('matrix');
+const ctx = canvas.getContext('2d');
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789سلامدنیافارسی';
+const fontSize = 14;
+const columns = canvas.width / fontSize;
+
+const drops = [];
+for(let x = 0; x < columns; x++) drops[x] = Math.random()*canvas.height;
+
+function draw() {
+    ctx.fillStyle = 'rgba(0,0,0,0.08)'; // کم‌رنگ‌تر
+    ctx.fillRect(0,0,canvas.width,canvas.height);
+
+    ctx.fillStyle = '#0f0';
+    ctx.font = fontSize + "px monospace";
+    for(let i=0; i<drops.length; i++){
+        const text = letters[Math.floor(Math.random()*letters.length)];
+        ctx.fillText(text, i*fontSize, drops[i]*fontSize);
+        if(drops[i]*fontSize > canvas.height || Math.random() > 0.98) drops[i] = 0;
+        drops[i]++;
+    }
+}
+setInterval(draw, 50);
+</script>
+
+</body>
+</html>
